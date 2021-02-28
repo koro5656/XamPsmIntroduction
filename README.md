@@ -2,9 +2,9 @@
 
 #### はじめに
 
-Xamarinを使う場合、Prismを使っての開発が何かと楽です。
-が、Visual Studio for Mac には「Prism Template Pack」が提供されておらず、気軽にPrismを使うことができません。
-そこで、自力でPrismを導入する手順をまとめてみました。
+Xamarinを使う場合、Prismを使っての開発が何かと楽です。  
+が、Visual Studio for Mac には「Prism Template Pack」が提供されておらず、気軽にPrismを使うことができません。  
+そこで、自力でPrismを導入する手順をまとめてみました。  
 
 #### 参考サイト
 
@@ -12,32 +12,32 @@ Xamarinを使う場合、Prismを使っての開発が何かと楽です。
 
 #### 前提
 
-・Visual Studio for Mac 8.8.10(build 2)
-・空白フォームのアプリ(Xamrin.Forms) でプロジェクト作成済み
-※プロジェクト名は「XF5Psm8Introduction」としています。
+・Visual Studio for Mac 8.8.10(build 2)  
+・空白フォームのアプリ(Xamrin.Forms) でプロジェクト作成済み  
+※プロジェクト名は「XF5Psm8Introduction」としています。  
 
 #### 1. Xamarin.Formsのアップデート
 
-全プロジェクトのXamarin.Formsを最新にアップデートします。
-ついでに、Xamarin.Essentialsも。
-・Xamarin.Forms：5.0.0.2012
-・Xamarin.Essentials：1.6.1
-( 2021/2/23 現在 )
+全プロジェクトのXamarin.Formsを最新にアップデートします。  
+ついでに、Xamarin.Essentialsも  
+・Xamarin.Forms：5.0.0.2012  
+・Xamarin.Essentials：1.6.1  
+( 2021/2/23 現在 )  
 
 #### 2. Androidのターゲットフレームワークを変更
 
 ソリューションをビルドするとAndroidプロジェクトで次のエラーが発生しました。
 AndroidのTargetFrameworkVersionを変更すると解消します。
 
-Androidプロジェクトのオプションを開き以下の項目を変更します。
-・ビルド->全般 のターゲットフレームワークを「Android 10.0(Q)」に変更
-・ビルド->Androidアプリケーションの対象のAndroidAndroidバージョンを「Android 10.0(API level 29)」に変更
+Androidプロジェクトのオプションを開き以下の項目を変更します。  
+・ビルド->全般 のターゲットフレームワークを「Android 10.0(Q)」に変更  
+・ビルド->Androidアプリケーションの対象のAndroidAndroidバージョンを「Android 10.0(API level 29)」に変更  
 
 #### 3. NuGetでPrism.Unity.Formsのインストール
 
-全プロジェクトにPrism.Unity.Formsをインストールします。
-・Prism.Unity.Forms：8.0.0.1909
-( 2021/2/23 現在 )
+全プロジェクトにPrism.Unity.Formsをインストールします。  
+・Prism.Unity.Forms：8.0.0.1909  
+( 2021/2/23 現在 )  
 
 #### 4. App.xamlとApp.xaml.csを変更
 
@@ -86,9 +86,9 @@ namespace XF5Psm8Introduction
 
 #### 5. ViewとViewModelの作成
 
-XF5Psm8IntroductionプロジェクトのMainPageを削除して、Views, ViewModelsフォルダを作成します。
-Viewsフォルダに、MainPage.xaml(ContentPage)を追加します。
-ViewModelsフォルダに、MainPageViewModel.csを追加します。
+XF5Psm8IntroductionプロジェクトのMainPageを削除して、Views, ViewModelsフォルダを作成します。  
+Viewsフォルダに、MainPage.xaml(ContentPage)を追加します。  
+ViewModelsフォルダに、MainPageViewModel.csを追加します。  
 
 #### 6. NavigationServiceを使ってMainPageを表示
 
@@ -133,5 +133,5 @@ namespace XF5Prism8Template
 
 #### 7. シュミレータで起動確認
 
-ここまでくればPrismの導入は完了です。
-最後にシュミレータでの起動確認をして終わりにしたいと思います。
+ここまでくればPrismの導入は完了です。  
+最後にシュミレータでの起動確認をして終わりにしたいと思います。  
